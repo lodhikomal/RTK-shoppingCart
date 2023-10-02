@@ -10,10 +10,11 @@ import {
   MDBCol,
   MDBRow,
 } from "mdb-react-ui-kit";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Product() {
   const items = useSelector((state) => state.allCart.items);
+  const dispatch = useDispatch();
   return (
     <div className="m-2">
       <MDBContainer>
